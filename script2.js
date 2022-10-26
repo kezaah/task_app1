@@ -14,7 +14,7 @@ window.addEventListener('load', () => {
         // assign the class 'task' to the eleemnt created
         task_el.classList.add('task');
         
-        const task_content_el = document.createElement('ol');
+        //const task_content_el = document.createElement('ol');
         const task_content_el = document.createElement('li');
 
         // same workflow as above
