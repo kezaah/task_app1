@@ -13,7 +13,15 @@ window.addEventListener('load', () => {
         const task_el = document.createElement('div');
         // assign the class 'task' to the eleemnt created
         task_el.classList.add('task');
+        function validateForm() {
+           
+            if (task_form == "") {
+              alert("Name must be filled out");
+              return false;
+            }
+          }
         const task_content_el = document.createElement('ol');
+        const task_content_el = document.createElement('li');
 
         // same workflow as above
         //const task_content_el = document.createElement('div');
