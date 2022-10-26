@@ -7,8 +7,8 @@ window.addEventListener('load', () => {
         e.preventDefault();
 
         const task = input.value;
-        if (task == "") {
-        alert("Please Enter Some Task");
+        if (task == '') {
+        alert('Please Enter Some Task');
         return 0;
       }
 
@@ -26,7 +26,6 @@ window.addEventListener('load', () => {
         const task_input_el = document.createElement('input');
         task_input_el.classList.add('text');
         task_input_el.type = 'text';
-       
         task_input_el.value = task;
 
         task_input_el.setAttribute("readonly", "readonly");
