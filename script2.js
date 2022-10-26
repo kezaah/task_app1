@@ -13,13 +13,17 @@ window.addEventListener('load', () => {
         const task_el = document.createElement('div');
         // assign the class 'task' to the eleemnt created
         task_el.classList.add('task');
+        const task_content_el = document.createElement('li');
 
         // same workflow as above
-        const task_content_el = document.createElement('div');
+        //const task_content_el = document.createElement('div');
         task_content_el.classList.add('content');
 
         // make the task_conent_el a child of the task_el (div)
         task_el.appendChild(task_content_el);
+
+        
+        
 
         // create an input field to store the task values
         const task_input_el = document.createElement('input');
@@ -38,9 +42,11 @@ window.addEventListener('load', () => {
         task_edit_el.classList.add('edit');
         task_edit_el.innerText = 'Edit';
 
+
         const task_del_el = document.createElement('button');
         task_del_el.classList.add('delete');
         task_del_el.innerText = 'Delete';
+
 
         task_action_el.appendChild(task_edit_el);
         task_action_el.appendChild(task_del_el);
