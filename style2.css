@@ -1,81 +1,119 @@
 * {
-    margin: 0;
-    box-sizing: border-box;
+	margin: 0;
+	
+	/* box-sizing informs browser how to calculate page width*/
+	/* border-box: width and height properties (and min/max properties) includes content, padding and border */
+	/* content-box: The width and height properties (and min/max properties) includes only the content. Border and padding are not included*/
+	box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
 }
 
-
 body {
-    display: block;
-    flex-direction: column;
-    min-height: 100vh;
-    color: rgb(146, 141, 146);
-    background-color: blueviolet;
-
+	/* The display property specifies the display behavior (the type of rendering box) of an element. */
+	/* The flex property sets the flexible length on flexible items */
+	/* display: - flexDisplays an element as a block-level flex container */
+	display: flex;
+	flex-direction: column;
+	/* set element minimum height to 100% viewport height */
+	/* Adopts height to viewport */
+	min-height: 100vh;
+	color: rgb(227, 67, 67);
+	background-color:#374151;
 }
 
 header {
-padding: 2rem 1rem;
-max-width: 800px;
-width: 100%;
-margin: 0 auto;
+	/* the rem unit means "The root element's font-size"  */
+	padding: 2rem 1rem;
+	max-width: 800px;
+	width: 100%;
+	margin: 0 auto;
 }
 
-.task_list_main{
-    font-size: 3rem;
+h1{ 
+	font-size: 3rem;
     font-style: normal;
-    font-weight: 300;
-    color: beige;
-    margin-bottom: 1rem;
+	font-weight: 300;
+	color: whitesmoke;
+	margin-bottom: 1rem;
     text-align: center;
 }
 
-.new_task_form{
-    display: flex;
+.new_task_form {
+	display: flex;
 }
 
-input, button{
-appearance: none;
-border: none;
-outline: none;
-background: none;
+input, button {
+	appearance: none;
+	border: none;
+	outline: none;
+	background: none;
 }
 
-.task_input::placeholder{
-    color:rgb(188, 201, 201);
+.task_input {
+	flex: 1 1 0%;
+	background-color: lightgoldenrodyellow;
+	padding: 1rem;
+	border-radius: 2rem;
+	margin-right: 1rem;
+	font-size: 1.25rem;
 }
 
-.task_add{
-    color:beige;
+/* A CSS pseudo-element is used to style specified parts of an element. */
+/* Style the first letter, or line, of an element */
+/* Insert content before, or after, the content of an element */
+
+
+.task_input::placeholder {
+	color: brown;
+}
+
+.task_add {
+	color:whitesmoke;
     width: 100px;
-    font-size: 1rem;
-    font-weight: 600;
-    background-color: beige;
+	font-size: 1rem;
+	font-weight: 600;
+    background-color: #3486f8;
     border-radius: 1.1rem;
-    cursor: pointer;
-    transition: 0.4s;
+	cursor: pointer;
+	transition: 0.4s;
 }
 
-.task_add:hover{
-    opacity: 0.8;
+/* A pseudo-class is used to define a special state of an element. */
+/* - Style an element when a user mouses over it */
+/* - Style visited and unvisited links differently */
+/* - Style an element when it gets focus */
+.task_add:hover {
+	opacity: 0.8;
 }
 
-.task_add:active{
-    opacity: 0.5;
+.task_add:active {
+	opacity: 0.5;
 }
 
-.task_list{
-    padding: 1rem;
+main {
+	/* flex sets flexible size on flexible elements*/
+	/*Auto: 1 1 Auto*/
+	/*Initial: 0 1 Auto*/
+	/*None: 0 0 Auto*/
+	flex: 1 1 0%; /*grow shrink basic*/
+	max-width: 800px;
+	width: 100%;
+	/*Margin 0 (top & bottom), auto (right & left)*/
+	margin: 0 auto;
 }
 
-.task_list > h2{
-    font-size: 1.5rem;
-    font-weight: 300;
-    color:aquamarine;
-    margin-bottom: 1rem;
+.task-list {
+	padding: 1rem;
 }
 
-#tasks .task {
+.task_list > h2 {
+	font-size: 1.5rem;
+	font-weight: 300;
+	color: whitesmoke;
+	margin-bottom: 1rem;
+}
+
+.task {
 	display: flex;
 	/* The justify-content property aligns the flexible container's items when the items do not use all available space on the main-axis (horizontally) */
 	/* Items will have space between them */
